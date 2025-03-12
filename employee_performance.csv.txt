@@ -1,0 +1,6 @@
+employee_id,employee_name,department,salary,performance_score,last_promotion_date
+1,John,IT,75000,4.5,2020-01-01
+2,Sarah,HR,65000,3.8,2020-07-01
+3,Michael,Finance,80000,4.2,2021-01-01
+4,Emma,Marketing,70000,4.0,2021-07-01
+5,Chris,Sales,60000,3.6,2022-01-01

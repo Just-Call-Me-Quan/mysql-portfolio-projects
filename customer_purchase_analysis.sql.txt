@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS retail_db;
+USE retail_db;
+
+CREATE TABLE customer_purchases (
+    purchase_id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(255),
+    product VARCHAR(255),
+    quantity INT,
+    price DECIMAL(10,2),
+    purchase_date DATE
+);
+
+-- Sample Data Inserts
+INSERT INTO customer_purchases (customer_name, product, quantity, price, purchase_date) VALUES
+('Alice', 'Laptop', 1, 999.99, '2024-01-01'),
+('Bob', 'Smartphone', 2, 599.99, '2024-01-02'),
+('Charlie', 'Headphones', 3, 199.99, '2024-01-03');
+
+-- SQL Queries for Analysis
+SELECT SUM(price * quantity) AS total_revenue FROM customer_purchases;
+SELECT customer_name, SUM(price * quantity) AS total_spent FROM customer_purchases GROUP BY customer_name ORDER BY total_spent DESC LIMIT 5;
